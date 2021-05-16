@@ -35,6 +35,7 @@ public class Calculator {
 	public static int mult(int mul1, int mul2) {
 		return mul1 * mul2;
 	}
+	
 
 	
 }
