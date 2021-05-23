@@ -3,41 +3,48 @@ package com.info.java.garage_task;
 public class Motorcycle extends Vehicle {
 
 	// attributes
-	private boolean helmet;
+	private String helmet;
 	private String twoWheels;
-	private boolean doesBikeHaveRadio;
-
-	// constructors
-	public Motorcycle(boolean helmet, String twoWheels, boolean radio) {
-		this.helmet = true;
-		this.twoWheels = twoWheels;
-		this.doesBikeHaveRadio = true;
-		// methods
-
+	public Motorcycle() {
+		super();
+		
 	}
-
-	public boolean isHelmet() {
+	public Motorcycle(String name, String color, String model, double price, boolean willItDrive,
+			boolean doesTheCarWork,String helmet, String twoWheels, String vehicleType) {
+		super(name, color, model, price, willItDrive, doesTheCarWork, vehicleType);
+		this.helmet = helmet;
+		this.twoWheels = twoWheels;
+		
+	}
+	public String getHelmet() {
 		return helmet;
 	}
-
-	public void setHelmet(boolean helmet) {
+	public void setHelmet(String helmet) {
 		this.helmet = helmet;
 	}
-
 	public String getTwoWheels() {
 		return twoWheels;
 	}
-
 	public void setTwoWheels(String twoWheels) {
 		this.twoWheels = twoWheels;
 	}
-
-	public boolean isDoesBikeHaveRadio() {
-		return doesBikeHaveRadio;
+	
+		
+	
+	public double getPrice() {
+		double tax = super.getPrice() / 210 * 50;
+		return super.getPrice() + tax;
 	}
+	
+	
+	
+	
+	
+	
 
-	public void setDoesBikeHaveRadio(boolean doesBikeHaveRadio) {
-		this.doesBikeHaveRadio = doesBikeHaveRadio;
-	}
+	// constructors
+	
+
+	
 
 }

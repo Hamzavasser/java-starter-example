@@ -3,25 +3,35 @@ package com.info.java.garage_task;
 public class Car extends Vehicle {
 
 	// attributes
-	private String sunRoof;
+	private int doors;
 
-	// constructors
 	public Car() {
 		super();
-
+		// TODO Auto-generated constructor stub
 	}
 
-	public Car(String name, String color, String model) {
-		super(name, color, model);
-
+	public Car(String name, String color, String model, double price, boolean willItDrive, boolean doesTheCarWork, int doors, String vehicleType) {
+		super(name, color, model, price, willItDrive, doesTheCarWork, vehicleType);
+		this.doors = doors;
 	}
 
-	// method
-	public void bigTruckBed() {
-		System.out.println("BEEPPP!!");
-
+	public int getDoors() {
+		return doors;
 	}
 
-	// get car info//
+	public void setDoors(int doors) {
+		this.doors = doors;
+	}
+
+	// constructors
+	
+	
+	public double getPrice() {
+		double tax = super.getPrice() / 150 * 50;
+		return super.getPrice() + tax;
+	}
+	
+
+	
 
 }

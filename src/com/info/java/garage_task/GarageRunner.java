@@ -1,22 +1,33 @@
 package com.info.java.garage_task;
-import java.util.ArrayList;
+
 
 public class GarageRunner {
 
 	public static void main(String[] args) {
-		// Truck pickUp = new Truck("Ford", "Blue", "Taurus");
-		Car car = new Car("Honda", "Blue", "Civic");
-		Vehicle car2 = new Car();
-		Truck four = new Truck("Yes", "Yeah it has a sunroof", "Lexus", "Red", "Acura");
-
-		// pickUp.horn("What is your question");
-
-		// System.out.println("Name: " + pickUp.getName());
-		System.out.println("Name:" + car.isDoesTheCarWork());
-		System.out.println("Name:" + four.isWillItDrive());
+		Motorcycle a = new Motorcycle("Harley Davidson", "Red", "Cruiser", 6000.00, true, false, "Yellow Helmet", "2 Wheels", "Motorcycle");
+		Truck b = new Truck("Suzuki", "Blue", "GSX-R", 10000.00, true, true, "Big", "Of Course", "Truck");
+		Car c = new Car("Honda", "Black", "Accord", 45000.00, false, false, 4, "Sedan");
+		
+		Garage joeGarage = new Garage("Joe Garage");
+		System.out.println("Welcome to: " + joeGarage.getMyGarage());
+		System.out.println();
+		
+		joeGarage.addVehicle(a);
+		joeGarage.addVehicle(b);
+		joeGarage.addVehicle(c);
+		
+		System.out.println();
+		joeGarage.getJoeGarage();
+		System.out.println();
+		
+		joeGarage.removeJoeGarage(a);
+		System.out.println();
+		joeGarage.getJoeGarage();
+		
+		
 
 	}
-	public String[] myCars = {"1", "2", "3", "4", "5"};
+
 	
 	  
 	
